@@ -1,0 +1,21 @@
+<!-- Case 1 is adding a div element with content "hello" into local blob:document iframe. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<iframe id="i1"></iframe>
+<script>
+    var html=[
+        '<div>hello</div>',
+    ].join('');
+    var blob=new Blob([html],{type:'text/html'});
+    var newURL=URL.createObjectURL(blob);
+    document.getElementById("i1").src=newURL;
+</script>
+</body>
+</html>

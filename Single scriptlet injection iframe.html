@@ -1,0 +1,19 @@
+<!-- Case 1 is adding a div element with content "hello" into local iframe by scriptlet injection. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<iframe id="i1" src="about:blank"></iframe>
+<script>
+    const ele=document.getElementById("i1").contentDocument;
+    const scr=ele.createElement("script");
+    scr.src="Case1 scriptlet.js";
+    ele.body.appendChild(scr);
+</script>
+</body>
+</html>

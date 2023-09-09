@@ -28,6 +28,7 @@ Only Demo case is shown here, including how above mentioned iframe are created, 
 Other cases tested in project are just variant of these cases,
 for example, a request with given URL is replaced with div element used in demo case.
 If everything is listed, it can be redundant and hard to read. 
+Moreover, every visual structure of test case is shown under the folder test case structure. 
 
 
 
